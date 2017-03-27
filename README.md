@@ -31,7 +31,7 @@ If you’ve tried AltspaceVR, you’ll have noticed that our user interface uses
 
 Here are the defining features of the cursor algorithm that you should replicate:
 
-- The state of the cursor is represented as spherical coordinates on a sphere surrounding the player. So, as the user moves their mouse, you should be updating the coordinates of the cursor in this space.
+- The position of the cursor is stored as spherical coordinates on a sphere surrounding the player. As the user moves their mouse, you should be updating and storing the coordinates of the cursor in this spherical coordinate space, not in 2D screen space.
 - Sensitivity of the cursor to mouse movement should be adjustable via the `SENSITIVITY` property.
 - Each frame, a raycast from the eye is made based on the spherical coordinates, against all the selectable objects in the scene.  In this project, selectedable objects are represented by the `furnitureGroup` which is defined for you.  
 - If there is no collision, the cursor geometry should be scaled to the DEFAULT_CURSOR_SCALE and positioned on the surface of a large virtual sphere of radius SPHERE_RADIUS surrounding the player.
